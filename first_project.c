@@ -46,13 +46,14 @@ int a[50], n1, nn1;
 
 int main()
 {
-    system("color 2");
+    system("color D");
     int a, ph = 0, x, p;
     char input;
-    printf("\t\t\t\t\t ______________________________________\n");
-    printf("\t\t\t\t\t|                                      |\n");
-    printf("\t\t\t\t\t|    ***WellCome To Our Website***     |\n");
-    printf("\t\t\t\t\t|______________________________________|\n");
+    printf("\n\n");
+    printf("\t\t\t\t**-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_**\n\n");
+    printf("\t\t\t\t | | |          _-_-_-***WellCome To Our Website*** _-_-_-    | | | \n\n");
+    printf("\t\t\t\t**-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_**\n\n\n");
+
     printf("\n\n");
     printf(" ________________________________\n");
     printf("|_*___*____*_____*____*____*_____|\n");
@@ -74,7 +75,8 @@ int main()
     {
     case 01:
     {
-        printf("Please Enter your Username : ");
+        system("color 2");
+        printf("\n\nPlease Enter your Username : ");
 
         fflush(stdin);
         gets(user);
@@ -99,7 +101,8 @@ int main()
         }
         else
         {
-            printf(" Sorry sir information does not match\n");
+            system("color 4");
+            printf("\nSorry sir information does not match\n");
         }
 
         printf("\n\nDo you want create an account sir?\nPlease enter yes or no Y/N ==>");
@@ -114,7 +117,8 @@ int main()
         }
         else
         {
-            printf("!!You are not Human!!");
+            system("color 4");
+            printf("\n\n!!You are not Human!!");
         }
     }
     break;
@@ -124,8 +128,10 @@ int main()
     case 02:
     {
         int qu;
+
     v:
     {
+        system("color 2");
         printf("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\n\n");
         printf("Enter Your Name: ");
         fflush(stdin);
@@ -137,11 +143,12 @@ int main()
         {
             char phone[12];
         z:
-        {
-            printf("Enter your phone number: ");
+            system("color 2");
+            {
+                printf("Enter your phone number: ");
 
-            scanf("%s", phone);
-        }
+                scanf("%s", phone);
+            }
             int nc = 0;
             nc = numbercheek(phone);
             if (nc == 1)
@@ -149,20 +156,22 @@ int main()
                 char user[10];
                 int me = 0;
             q:
-            {
-                printf("Enter your Username: ");
-                scanf("%s", user);
+                system("color 2");
+                {
+                    printf("Enter your Username: ");
+                    scanf("%s", user);
 
-                me = usercheek(user);
-            }
+                    me = usercheek(user);
+                }
                 if (me == 1)
                 {
                 i:
-                {
-                    printf("Enter Passward: ");
-                    scanf("%s", passward);
-                    printf("\n\n");
-                }
+                    system("color 2");
+                    {
+                        printf("Enter Passward: ");
+                        scanf("%s", passward);
+                        printf("\n\n");
+                    }
                     int pa;
                     pa = cheekpassward(passward);
                     if (pa == 1)
@@ -179,28 +188,29 @@ int main()
                         printf("_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-\n\n");
                         int r = 0;
                     l:
-                    {
-                        printf(" ________________________________\n");
-                        printf("|_*___*____*_____*____*____*_____|\n");
-                        printf("|       ***Plese Log in***       |\n");
-                        printf("|________________________________|\n");
-                        printf("|_*___*____*_____*____*____*_____|\n");
-                        printf("Please enter your username: ");
-                        fflush(stdin);
-                        gets(user);
-                        printf("Please enter your passward: ");
-                        gets(passward);
-                        printf("\n\n");
-                        readdata();
-                        int i;
-                        for (i = 0; i < n; i++)
+                        system("color 2");
                         {
-                            if (!strcmp(arr[i].user, user))
+                            printf(" ________________________________\n");
+                            printf("|_*___*____*_____*____*____*_____|\n");
+                            printf("|       ***Plese Log in***       |\n");
+                            printf("|________________________________|\n");
+                            printf("|_*___*____*_____*____*____*_____|\n");
+                            printf("Please enter your username: ");
+                            fflush(stdin);
+                            gets(user);
+                            printf("Please enter your passward: ");
+                            gets(passward);
+                            printf("\n\n");
+                            readdata();
+                            int i;
+                            for (i = 0; i < n; i++)
                             {
-                                r = 1;
+                                if (!strcmp(arr[i].user, user))
+                                {
+                                    r = 1;
+                                }
                             }
                         }
-                    }
 
                         int k = 0;
                         if (r == 1)
@@ -222,7 +232,7 @@ int main()
                             }
                             else
                             {
-                                printf("Sorry Wrong passward!!\t Forget passward?\nEnter yes or no Y/N: ");
+                                printf("\nSorry Wrong passward!!\t Forget passward?\nEnter yes or no Y/N: ");
                                 scanf(" %c", &input);
                                 if (input == 'y' || input == 'Y')
                                 {
@@ -329,6 +339,7 @@ int main()
                                     int r3 = 0, m;
                                 again:
                                 {
+                                    system("color 2");
                                     printf("Please enter a new username: ");
                                     fflush(stdin);
                                     scanf("%s", user);
@@ -346,7 +357,8 @@ int main()
                                 }
                                     if (r3 == 1)
                                     {
-                                        printf("!!! Sorry you can't use last username!!\t chose another one\n");
+                                        system("color 4");
+                                        printf("\n!!! Sorry you can't use last username!!\t chose another one\n");
 
                                         goto again;
                                     }
@@ -363,7 +375,7 @@ int main()
                                 }
                                 else
                                 {
-                                    printf("!!! Sorry you are not right person!!\n");
+                                    printf("\n!!! Sorry you are not right person!!\n");
                                     goto l;
                                 }
                             }
@@ -380,12 +392,12 @@ int main()
 
                     else if (pa == 2)
                     {
-                        printf("Your passward must contain at least one A,b,1,#\n\n");
+                        printf("\nYour passward must contain at least one A,b,1,#\n\n");
                         goto i;
                     }
                     else if (pa == 3)
                     {
-                        printf("week passward!!   plese set a Strong passward\n\n");
+                        printf("\nweek passward!!   plese set a Strong passward\n\n");
                         goto i;
                     }
                 }
@@ -412,11 +424,12 @@ int main()
     case 03:
     loginagain:
     {
-        printf(" ________________________________\n");
-        printf("|_*___*____*_____*____*____*_____|\n");
-        printf("|   wellcome to Login panal      |\n");
-        printf("|________________________________|\n");
-        printf("|_*___*____*_____*____*____*_____|\n\n");
+        system("color 2");
+        printf(" ________________________________________________________________\n");
+        printf("|_*___*____*_____*____*____*_____*___*____*_____*____*____*___*__|\n");
+        printf("|                 ****wellcome to Login panal****                |\n");
+        printf("|________________________________________________________________|\n");
+        printf("|_*___*____*_____*____*____*_____*___*____*_____*____*____*____*_|\n\n");
         printf("Please enter your Username: ");
 
         fflush(stdin);
@@ -424,6 +437,7 @@ int main()
         printf("\nPlease enter your passward: ");
         fflush(stdin);
         gets(passward);
+        printf("\n\n");
 
         readdataowner();
         int u, u1 = 0;
@@ -580,6 +594,7 @@ int namecheek(char name1[])
     }
     else
     {
+        system("color 4");
         return 2;
     }
 }
@@ -612,6 +627,7 @@ int numbercheek(char phone[])
     }
     else
     {
+        system("color 4");
         return 2;
     }
     if (ph == 11)
@@ -620,6 +636,7 @@ int numbercheek(char phone[])
     }
     else
     {
+        system("color 4");
         return 2;
     }
 }
@@ -655,11 +672,13 @@ int cheekpassward(char passward[])
         }
         else
         {
+            system("color 4");
             return 2;
         }
     }
     else
     {
+        system("color 4");
         return 3;
     }
 }
@@ -669,8 +688,8 @@ int usercheek(char user[])
 
     if (user[0] >= '0' && user[0] <= '9')
     {
-
-        printf("!!username can't start with number!!\n\n");
+        system("color 4");
+        printf("\n\n!!username can't start with number!!\n\n");
         return 2;
     }
     int x, ch = 0;
@@ -690,7 +709,8 @@ int usercheek(char user[])
     }
     else
     {
-        printf("!!username can't use space and any symble, !,@,#,$!!\n\n");
+        system("color 4");
+        printf("\n\n!!username can't use space and any symble, !,@,#,$!!\n\n");
         return 2;
     }
 }
@@ -806,6 +826,7 @@ void website(int cse)
 k:
 
 {
+    system("color 2");
     printf("\t\t\t**-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_**\n\n");
     printf("\t\t\t  |            _-_-_-** Food Menu List **_-_-_-                    | \n\n");
     printf("\t\t\t**-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_**\n\n\n");
